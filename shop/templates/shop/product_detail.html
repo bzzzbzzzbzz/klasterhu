@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="product-detail">
+    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+        <div class="product-info">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <p><strong>Цена:</strong> {{ product.price }} HUF</p>
+            <a href="https://wa.me/ваш_номер" class="btn-primary">Связаться по WhatsApp</a>
+        </div>
+    </div>
+    <a href="{% url 'product_list' %}" class="btn btn-secondary mt-4">Вернуться к каталогу</a>
+</div>
+{% endblock %}

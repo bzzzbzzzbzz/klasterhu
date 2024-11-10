@@ -1,0 +1,143 @@
+/* Основные стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заголовок */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #59514b; /* Новый основной цвет */
+    color: #fff;
+}
+
+.header .logo a {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header .navbar a {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #dcdcdc; /* Светлый оттенок для текста */
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.header .navbar a:hover {
+    color: #ffffff;
+}
+
+/* Основной контент */
+main {
+    margin-top: 20px;
+}
+
+/* Сетка каталога */
+.catalog-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Для планшетов - две колонки */
+@media (min-width: 768px) {
+    .catalog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Для ПК - три колонки */
+@media (min-width: 1024px) {
+    .catalog-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Карточка товара */
+.product-card {
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображения товаров */
+.product-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Заголовок и цена товара */
+.product-card h5 {
+    font-size: 18px;
+    color: #59514b; /* Новый цвет для заголовка товара */
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+/* Кнопка "Подробнее" */
+.btn-primary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #59514b; /* Новый основной цвет */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #463e39; /* Более тёмный оттенок для наведения */
+}
+
+/* Подвал */
+.footer {
+    padding: 20px;
+    background-color: #59514b; /* Новый основной цвет */
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #dcdcdc;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}

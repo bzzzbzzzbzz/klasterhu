@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <!-- Подключаем Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Оформление заказа</h1>
+
+    <!-- Информация о товаре -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">{{ product.name }}</h4>
+            <p class="card-text"><strong>Описание:</strong> {{ product.description }}</p>
+            <p class="card-text"><strong>Цена:</strong> {{ product.price }} HUF</p>
+        </div>
+    </div>
+
+    <!-- Форма заказа -->
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+        </div>
+        <button type="submit" class="btn btn-success">Подтвердить заказ</button>
+    </form>
+
+    <a href="{% url 'product_list' %}" class="btn btn-secondary mt-4">Вернуться к каталогу</a>
+</div>
+
+</body>
+</html>

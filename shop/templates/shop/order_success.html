@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за заказ!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Спасибо за ваш заказ!</h1>
+    <p>Ваш заказ был успешно оформлен. Мы скоро свяжемся с вами для подтверждения.</p>
+
+    <!-- Детали заказа -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4 class="card-title">{{ product.name }}</h4>
+            <p class="card-text"><strong>Описание:</strong> {{ product.description }}</p>
+            <p class="card-text"><strong>Цена:</strong> {{ product.price }} HUF</p>
+            <p class="card-text"><strong>Номер заказа:</strong> {{ order.id }}</p>
+            <p class="card-text"><strong>Email для связи:</strong> {{ order.email }}</p>
+        </div>
+    </div>
+
+    <!-- Кнопка для возврата на главную страницу -->
+    <a href="{% url 'product_list' %}" class="btn btn-primary mt-4">Вернуться в каталог товаров</a>
+</div>
+
+</body>
+</html>
