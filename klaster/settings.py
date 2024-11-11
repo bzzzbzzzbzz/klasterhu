@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'klaster.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'klaster',
-        'USER': 'stas',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',  # или IP, если PostgreSQL на удалённом сервере
-        'PORT': '5432',       # стандартный порт PostgreSQL
+        'NAME': 'klster_postgresql',          # Название вашей базы данных
+        'USER': 'klster_postgresql_user',      # Имя пользователя базы данных
+        'PASSWORD': "dtKxXKwTIzE52PVnnDAdQ4Clz1ocmCEM",
+        'HOST': 'dpg-csoq1vpu0jms738nulhg-a',         # Хост базы данных
+        'PORT': '5432',                        # Порт, обычно 5432 для PostgreSQL
     }
 }
 
