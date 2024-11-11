@@ -1,2 +1,1 @@
-web: gunicorn klaster.wsgi
-release: python manage.py migrate
+web: python manage.py migrate && gunicorn klaster.wsgi
